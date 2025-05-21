@@ -1,13 +1,11 @@
 #include <windows.h>
 #include <stdio.h>
 
-// === BPM e durações ===
 #define BPM 100
 #define SEMINIMA_MS (60000 / BPM)
 #define COLCHEIA_MS (SEMINIMA_MS / 2)
 #define PAUSA 30
 
-// === Notas da 4ª e 5ª oitava ===
 #define A4  440
 #define A4s 466
 #define B4  494
@@ -30,9 +28,8 @@ void tocar(int freq, int dur) {
 }
 
 int main() {
-    printf("Tocando 'The Imperial March' (Star Wars - trecho inicial)...\n");
+    printf("Tocando a musica do Darth Vader\n");
 
-    // Primeira frase
     tocar(A4, COLCHEIA_MS);
     tocar(A4, COLCHEIA_MS);
     tocar(A4, COLCHEIA_MS);
@@ -44,9 +41,8 @@ int main() {
     tocar(C5, COLCHEIA_MS);
     tocar(A4, SEMINIMA_MS + COLCHEIA_MS);
 
-    Sleep(SEMINIMA_MS);  // pausa entre frases
+    Sleep(SEMINIMA_MS);
 
-    // Segunda frase
     tocar(E5, COLCHEIA_MS);
     tocar(E5, COLCHEIA_MS);
     tocar(E5, COLCHEIA_MS);
